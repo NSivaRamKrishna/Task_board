@@ -1,0 +1,106 @@
+.tasks{
+    display:flex;
+}
+.user{
+    width:1055px;
+    height: 100px;
+    background-color: rgba(72, 64, 158, 1);
+    margin-left: 50px;
+    margin-top: 10px;
+    border-radius: 20px;
+}
+.user-name{
+    font-size: 36px;
+    font-style: Libre Franklin;
+    padding-top: 21px;
+    padding-left: 50px;
+    color: rgba(255, 255, 255, 1);
+}
+.new{
+    font-size: 15px;
+    font-style: Libre Franklin;
+    padding-left: 50px;
+    color: rgba(255, 255, 255, 1);
+}
+.tasks{
+    padding-top: 50px;
+    padding-left: 30px;
+    width:1000px;
+}
+.title{
+    margin-left: 38px;
+    width:200px;
+    display: flex;
+    justify-content: space-between;
+}
+.title-name{
+    color: darkgray;
+    font-weight: bold;
+    font-size: 15px;
+    font-style: Libre Franklin;
+}
+
+.card{
+    margin-left: 38px;
+    width: 200px;
+    box-shadow: 0px 0px 8px 0px rgba(54, 89, 226, 0.16);
+    background-color: white;
+    border-radius: 8px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.card-title{
+    padding-top: 5px;
+    padding-left: 10px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    margin-right: 8px;
+    font-style: Nunito Sans;
+}
+.time{
+    width:160px;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+.start{
+    width:60px;
+}
+.t1{
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    font-style: Nunito Sans;
+    color: rgba(119, 119, 119, 1);
+}
+.t2{
+    width: 70px;
+    background: rgba(235, 238, 252, 1);
+    border-radius: 8px;
+    padding: 4px, 8px, 4px, 8px;
+    color: rgba(54, 89, 226, 1);
+    padding-left: 4px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    font-style: Nunito Sans
+}
+.logout{
+    padding-top: 10px;
+    margin-left: 980px;
+}
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+  }
+  .menu-button {
+    padding: 5px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }

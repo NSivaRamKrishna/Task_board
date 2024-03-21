@@ -1,0 +1,46 @@
+.taskboard{
+    display: flex;
+    width: 240px;
+    padding-top:40px
+}
+.icon{
+    width: 20px;
+    height: 20px;
+    padding-top: 22.5px;
+    padding-left: 40px;
+}
+.heading{
+    width: 101px;
+    height: 28px;
+    font-style: Nunito Sans;
+}
+.h3{
+    padding-top: 16px;
+    padding-left: 15px;
+    margin-top: 15px;
+}
+.name{
+    width: 220px;
+    padding-left: 19px;
+}
+.profile{
+    margin-top: 24px;
+}
+.align{
+    margin-top: 10px;
+    font-size: 16px;
+    font-style: Nunito Sans;
+}
+.p1{
+    margin-top: 20px;
+    font-size: 16px;
+    font-style: Nunito Sans;
+    padding-left: 40px;
+}
+.p2{
+    margin-top: 10px;
+}
+.button-container{
+    display: flex;
+    justify-content: space-evenly;
+}
