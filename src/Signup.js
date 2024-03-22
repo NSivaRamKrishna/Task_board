@@ -17,7 +17,7 @@ const Signup = ({ onSignupSubmit }) => {
       return;
     }
       const userData = { username, password };
-    axios.post('http://localhost:9000/user/register', userData)
+    axios.post('https://todobackend-production-cb7d.up.railway.app/user/register', userData)
       .then(res => {
         if (res.status === 200) {
           console.log(res.data.message);

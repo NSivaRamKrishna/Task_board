@@ -35,7 +35,7 @@ const EditModal = ({ open, setOpen, task, setTask, onSubmit }) => {
         <Box sx={style}>
           <form onSubmit={handleSubmit}>
             <div className="a4">
-              <label htmlFor="name">Edit Task</label>
+              <label htmlFor="name">Edit Project Name</label>
             </div>
             <div className="a6">
               <input

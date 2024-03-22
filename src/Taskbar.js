@@ -34,7 +34,7 @@ const Taskbar = ({ onTaskSelected }) => {
   const fetchTaskData = async () => {
     try {
       const id = userData.userid;
-      const res = await axios.get(`http://localhost:9000/task/${id}`);
+      const res = await axios.get(`https://todobackend-production-cb7d.up.railway.app/task/${id}`);
       if (res.status === 200) {
         setTaskData(res.data);
       }
@@ -50,7 +50,7 @@ const Taskbar = ({ onTaskSelected }) => {
   const handleAddTask = async (task) => {
     const id = userData.userid;
     try {
-      const res = await axios.post(`http://localhost:9000/task/add/${id}`, { task });
+      const res = await axios.post(`https://todobackend-production-cb7d.up.railway.app/task/add/${id}`, { task });
       if (res.status === 200) {
         setTempCounter((prevCount) => prevCount + 1);
         setTask("");
@@ -74,7 +74,7 @@ const Taskbar = ({ onTaskSelected }) => {
   const handleDelete = () => {
     console.log(selectedTask.id);
     axios
-      .post(`http://localhost:9000/task/remove/${selectedTask.id}`)
+      .post(`https://todobackend-production-cb7d.up.railway.app/task/remove/${selectedTask.id}`)
       .then((res) => {
         if (res.status === 200) {
           console.log(res.data);
@@ -97,7 +97,7 @@ const Taskbar = ({ onTaskSelected }) => {
   const handleEditSubmit = (editedTask) => {
     console.log(editedTask);
     console.log(selectedTask.id);
-    axios.post(`http://localhost:9000/task/update/${selectedTask.id}`,{task:editedTask})
+    axios.post(`https://todobackend-production-cb7d.up.railway.app/task/update/${selectedTask.id}`,{task:editedTask})
     .then((res)=>{
       if(res.status === 200){
         console.log(res.data);

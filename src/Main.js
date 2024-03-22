@@ -20,7 +20,7 @@ const Main = ({ taskInfo }) => {
   const fetchData = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:9000/todo/${taskInfo.id}`
+        `https://todobackend-production-cb7d.up.railway.app/todo/${taskInfo.id}`
       );
       setData(response.data);
     } catch (error) {
@@ -35,7 +35,7 @@ const Main = ({ taskInfo }) => {
   const handleAddTodo = async (data) => {
     const id = taskInfo.id;
     axios
-      .post(`http://localhost:9000/todo/add/${id}`, {
+      .post(`https://todobackend-production-cb7d.up.railway.app/todo/add/${id}`, {
         content: data.name,
         created_at: data.startDate,
         completed_at: data.deadLine,
@@ -73,7 +73,7 @@ const Main = ({ taskInfo }) => {
   };
 
   const handleEditSubmit = (editedData) => {
-    axios.post(`http://localhost:9000/todo/update/${editedData.id}`,{
+    axios.post(`https://todobackend-production-cb7d.up.railway.app/todo/update/${editedData.id}`,{
       content: editedData.name,
         created_at: editedData.startDate,
         completed_at: editedData.deadLine,
@@ -90,7 +90,7 @@ const Main = ({ taskInfo }) => {
 
   const handleDelete = (itemId, index) => {
     axios
-      .post(`http://localhost:9000/todo/remove/${itemId}`)
+      .post(`https://todobackend-production-cb7d.up.railway.app/todo/remove/${itemId}`)
       .then((res) => {
         if (res.status === 200) {
           fetchData();

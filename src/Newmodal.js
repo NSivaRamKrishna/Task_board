@@ -41,12 +41,12 @@ const Newmodal = ({ open, setOpen, setAdd, setTempAdd }) => {
         <Box sx={style}>
           <form onSubmit={eventHandler}>
             <div className="a4">
-              <label htmlFor="name">Name of the task</label>
+              <label htmlFor="name">Name of the Project</label>
             </div>
             <div className="a6">
               <input
                 type="text"
-                placeholder="Task"
+                placeholder="Project Name"
                 className="a5"
                 value={task}
                 onChange={(event) => setTask(event.target.value)}
