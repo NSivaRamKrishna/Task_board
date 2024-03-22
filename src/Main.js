@@ -64,7 +64,6 @@ const Main = ({ taskInfo }) => {
   };
 
   const handleUpdate = (itemId, index) => {
-    console.log("Update item with ID:", itemId);
     const todoData = data.todo;
     const itemToUpdate = todoData.find((item) => item.id === itemId);
     setEditModalData(itemToUpdate);
@@ -99,7 +98,6 @@ const Main = ({ taskInfo }) => {
       .catch((error) => {
         console.error("Failed to delete data:", error);
       });
-    console.log("Delete item with ID:", itemId);
     setSelectedItemId(null);
     handleMenuClose(index)();
   };

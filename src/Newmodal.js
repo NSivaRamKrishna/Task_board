@@ -9,7 +9,6 @@ const Newmodal = ({ open, setOpen, setAdd, setTempAdd }) => {
     e.preventDefault();
     setAdd(task); 
     setTempAdd((prevCount) => prevCount + 1);
-    console.log({ add: task });
     setTask(""); 
     setOpen(false);
   };

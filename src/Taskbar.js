@@ -77,14 +77,12 @@ const Taskbar = ({ onTaskSelected }) => {
       .post(`https://todobackend-production-cb7d.up.railway.app/task/remove/${selectedTask.id}`)
       .then((res) => {
         if (res.status === 200) {
-          console.log(res.data);
           setTempCounter((prevCount) => prevCount + 1);
         }
       })
       .catch(error => {
         console.error("Failed to delete task:", error);
       });
-    console.log("Delete task:", selectedTask);
     handleMenuClose();
   };
 
@@ -95,24 +93,19 @@ const Taskbar = ({ onTaskSelected }) => {
   };
 
   const handleEditSubmit = (editedTask) => {
-    console.log(editedTask);
-    console.log(selectedTask.id);
     axios.post(`https://todobackend-production-cb7d.up.railway.app/task/update/${selectedTask.id}`,{task:editedTask})
     .then((res)=>{
       if(res.status === 200){
-        console.log(res.data);
         setTempCounter((prevCount)=> prevCount + 1);
       }
     })
     .catch(error=>{
       console.error("Failed to update data:",error);
     });
-    console.log("Edited task:", editedTask);
     setEditModalOpen(false);
   };
 
   const newEvent = (taskInfo) => {
-    console.log("Task Info:", taskInfo);
     onTaskSelected(taskInfo);
   };
 

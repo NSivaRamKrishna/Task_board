@@ -10,7 +10,6 @@ function App() {
   const [selectedTaskInfo, setSelectedTaskInfo] = useState(null);
   const navigate = useNavigate();
   const handleTaskSelected = (taskInfo) => {
-    console.log("Selected Task:", taskInfo);
     setSelectedTaskInfo(taskInfo);
   };
   const customStyle = {
