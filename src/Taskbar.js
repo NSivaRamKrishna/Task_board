@@ -18,7 +18,6 @@ const Taskbar = ({ onTaskSelected }) => {
   const [editModalOpen, setEditModalOpen] = useState(false); 
   const location = useLocation();
   const userData = location.state?.userData;
-  console.log("task",userData);
   const customStyle = {
     width: '240px',
     backgroundColor: 'rgba(235, 238, 252, 1)',
