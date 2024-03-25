@@ -20,7 +20,7 @@ const Main = ({ taskInfo }) => {
   const fetchData = async () => {
     try {
       const response = await axios.get(
-        `https://todobackend-production-cb7d.up.railway.app/todo/${taskInfo.id}`
+        `https://demo-rho-snowy.vercel.app/todo/${taskInfo.id}`
       );
       setData(response.data);
     } catch (error) {
@@ -35,7 +35,7 @@ const Main = ({ taskInfo }) => {
   const handleAddTodo = async (data) => {
     const id = taskInfo.id;
     axios
-      .post(`https://todobackend-production-cb7d.up.railway.app/todo/add/${id}`, {
+      .post(`https://demo-rho-snowy.vercel.app/todo/add/${id}`, {
         content: data.name,
         created_at: data.startDate,
         completed_at: data.deadLine,
@@ -72,7 +72,7 @@ const Main = ({ taskInfo }) => {
   };
 
   const handleEditSubmit = (editedData) => {
-    axios.post(`https://todobackend-production-cb7d.up.railway.app/todo/update/${editedData.id}`,{
+    axios.post(`https://demo-rho-snowy.vercel.app/todo/update/${editedData.id}`,{
       content: editedData.name,
         created_at: editedData.startDate,
         completed_at: editedData.deadLine,
@@ -89,7 +89,7 @@ const Main = ({ taskInfo }) => {
 
   const handleDelete = (itemId, index) => {
     axios
-      .post(`https://todobackend-production-cb7d.up.railway.app/todo/remove/${itemId}`)
+      .post(`https://demo-rho-snowy.vercel.app/todo/remove/${itemId}`)
       .then((res) => {
         if (res.status === 200) {
           fetchData();

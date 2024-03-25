@@ -17,7 +17,7 @@ const Signup = ({ onSignupSubmit }) => {
       return;
     }
       const userData = { username, password };
-    axios.post('https://todobackend-production-cb7d.up.railway.app/user/register', userData)
+    axios.post('https://demo-rho-snowy.vercel.app/user/register', userData)
       .then(res => {
         if (res.status === 200) {
           console.log(res.data.message);
